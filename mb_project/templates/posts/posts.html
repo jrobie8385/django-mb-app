@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This is the posts overview page</title>
+  </head>
+  <body>
+    {% if posts.count == 0 %}
+
+      <h2>You do not have any posts yet</h2>
+
+    {% elif posts.count == 1 %}
+
+      <h2>The number of posts is {{posts.count}}</h2>
+
+    {% else %}
+
+      <h2>The number of posts are {{posts.count}}</h2>
+
+    {% endif %}
+
+    {% for post in posts %} <!-- Note that if we did not define "context_object_name" in the views.py file, we would have to use "object_list" -->
+      <h4>{{post.text}}</h4>
+    {% endfor %}
+
+    <h6> <a href="{% url 'home' %}">Return Home</a> </h6>
+
+  </body>
+</html>
