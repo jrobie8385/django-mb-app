@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mb_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mb_project.mb_project.settings')
 #https://stackoverflow.com/questions/47616586/gunicorn-django-importerror-no-module-named-application-wsgi
 #NOTE: Must put "mb_project.mb_project.settings" above since we created a django project with the extra subfolder.
 
